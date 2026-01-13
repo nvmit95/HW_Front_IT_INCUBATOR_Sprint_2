@@ -1,6 +1,6 @@
 .App {
   --header_height: 60px;
-  padding-top: 130px;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -41,4 +41,5 @@
   font-weight: 600;
   font-size: 22px;
   color: #000;
+  padding-top: 30px;
 }
