@@ -28,10 +28,12 @@ function Clock() {
   const start = () => {
     // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
     // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-    const intervalId = window.setInterval(() => {
-      setDate(new Date())
-    }, 1000)
-    setTimerId(intervalId)
+    if (!timerId) {
+      const intervalId = window.setInterval(() => {
+        setDate(new Date())
+      }, 1000)
+      setTimerId(intervalId)
+    }
   }
 
   const stop = () => {
@@ -49,12 +51,12 @@ function Clock() {
     setShow(false)
   }
 
-  const getDigitsString = (num:number) => num < 10 ? '0' + num : num
+  const getDigitsString = (num: number) => num < 10 ? '0' + num : num
 
   // 'date->time'
   const stringTime = `${getDigitsString(date.getHours())}:${getDigitsString(date.getMinutes())}:${getDigitsString(date.getSeconds())}` ||
     <br /> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-  const stringDate = `${getDigitsString(date.getDate())}.${getDigitsString(date.getMonth()+1)}.${date.getFullYear()} ` ||
+  const stringDate = `${getDigitsString(date.getDate())}.${getDigitsString(date.getMonth() + 1)}.${date.getFullYear()} ` ||
     <br /> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
   // Форматирование через Intl.DateTimeFormat
@@ -112,6 +114,7 @@ function Clock() {
           id={'hw9-button-start'}
           disabled={timerId !== undefined} // пишут студенты // задизэйблить если таймер запущен
           onClick={start}
+
         >
           start
         </SuperButton>

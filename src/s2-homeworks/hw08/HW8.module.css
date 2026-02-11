@@ -43,8 +43,8 @@
   width: 30%;               /* Колонка занимает 30% ширины */
   font-weight: 500;         /* Немного жирнее обычного текста */
 }
-.container {
+.buttonsContainer {
   display: flex;
-  flex-direction: column; /* элементы идут сверху вниз */
   gap: 24px;              /* расстояние МЕЖДУ кнопками и таблицей */
+  padding-bottom: 18px;
 }

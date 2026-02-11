@@ -1,17 +1,15 @@
 .App {
   --header_height: 60px;
-
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
 .hw {
-
+  font-family: "Montserrat", sans-serif;
   position: relative;
   max-width: 1280px;
-  padding: 10px 70px 32px 70px;
-  margin: 10px auto 0;
+  margin: 0 auto;
+  padding: 30px 0 160px 0;
   display: flex;
   flex-direction: column;
 
@@ -40,7 +38,9 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 22px;
-  color: #000;
+  max-width: 1280px;
+  margin: 0 auto;
   padding-top: 30px;
-  padding-left: 276px;
+  padding-bottom: 10px;
+  color: #000;
 }
