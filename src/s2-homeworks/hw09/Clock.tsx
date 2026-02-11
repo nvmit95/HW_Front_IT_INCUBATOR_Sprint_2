@@ -51,7 +51,7 @@ function Clock() {
     setShow(false)
   }
 
-  const getDigitsString = (num: number) => num < 10 ? '0' + num : num
+  // const getDigitsString = (num:number) => num < 10 ? '0' + num : num
 
   // 'date->time'
   // const stringTime = `${getDigitsString(date.getHours())}:${getDigitsString(date.getMinutes())}:${getDigitsString(date.getSeconds())}` ||
@@ -74,12 +74,13 @@ function Clock() {
 
   const stringDate = new Intl.DateTimeFormat('en-GB').format(date).replace(/\//g, '.')
 
-  const stringDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(date)
-  const stringMonth = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date)
+  const stringDay = new Intl.DateTimeFormat('en-US', {weekday: 'long'}).format(date)
+  const stringMonth = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date)
 
 
-
-
+  // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
+  //const stringDay = `${weekDays[date.getDay()]}` || <br /> // пишут студенты
+  //const stringMonth = `${months[date.getMonth()]}` || <br /> // пишут студенты
 
   return (
     <div className={s.clock}>
@@ -115,7 +116,6 @@ function Clock() {
           id={'hw9-button-start'}
           disabled={timerId !== undefined} // пишут студенты // задизэйблить если таймер запущен
           onClick={start}
-
         >
           start
         </SuperButton>
