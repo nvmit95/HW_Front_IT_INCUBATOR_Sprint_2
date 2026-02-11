@@ -9,21 +9,21 @@ function Clock() {
   const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
   const [show, setShow] = useState<boolean>(false)
 
-  const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ]
+  // const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  // const months = [
+  //   "January",
+  //   "February",
+  //   "March",
+  //   "April",
+  //   "May",
+  //   "June",
+  //   "July",
+  //   "August",
+  //   "September",
+  //   "October",
+  //   "November",
+  //   "December"
+  // ]
 
   const start = () => {
     // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
@@ -53,7 +53,7 @@ function Clock() {
 
   // const getDigitsString = (num:number) => num < 10 ? '0' + num : num
 
-  // 'date->time'
+  // вариант с костылями
   // const stringTime = `${getDigitsString(date.getHours())}:${getDigitsString(date.getMinutes())}:${getDigitsString(date.getSeconds())}` ||
   //   <br /> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
   // const stringDate = `${getDigitsString(date.getDate())}.${getDigitsString(date.getMonth() + 1)}.${date.getFullYear()} ` ||
