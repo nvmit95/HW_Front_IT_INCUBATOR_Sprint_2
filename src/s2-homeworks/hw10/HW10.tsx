@@ -19,7 +19,7 @@ const HW10 = () => {
 
   const dispatch = useAppDispatch()
 
-  console.log(isLoading, "isLoading")
+  // console.log(isLoading, "isLoading")
 
 
   const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд

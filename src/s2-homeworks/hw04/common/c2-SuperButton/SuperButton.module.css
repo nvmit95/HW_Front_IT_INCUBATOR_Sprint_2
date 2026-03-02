@@ -8,7 +8,8 @@
   font-weight: 600;
   font-size: 14px;
   color: #fff;
-  width: 150px; /* фиксированная ширина для всех кнопок */
+  width: auto; /* фиксированная ширина для всех кнопок */
+  min-width: 150px;  /* минимальная ширина */
   transition: background 0.2s, color 0.2s, transform 0.2s; /* плавный переход */
 }
 
