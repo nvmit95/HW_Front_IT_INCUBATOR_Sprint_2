@@ -1,23 +1,105 @@
+/* ==================================================
+   HW12 – Тема и стили для приложения
+   Используем CSS-переменные для светлой, синей и тёмной темы
+================================================== */
+
+/* ---------------------------------------------
+   1️⃣ Переменные тем
+--------------------------------------------- */
+
+/* Светлая тема */
 [data-theme='1'] {
-    --color: #000000;
-    --background: #FFFFFF;
+  --color: #000000;       /* основной цвет текста */
+  --background: #FFFFFF;  /* основной фон */
 }
 
+/* Синяя / светло-голубая тема */
 [data-theme='2'] {
-    --color: #000000;
-    --background: #DDEEFF;
+  --color: #000000;       /* текст чёрный */
+  --background: #DDEEFF;  /* фон голубой */
 }
 
+/* Тёмная тема */
 [data-theme='3'] {
-    --color: #FFFFFF;
-    --background: #212A34;
+  --color: #FFFFFF;       /* текст белый */
+  --background: #212A34;  /* тёмный фон */
 }
 
+/* ---------------------------------------------
+   2️⃣ Глобальные стили страницы
+--------------------------------------------- */
 html {
-    background-color: var(--background);
-    color: var(--color);
+  background-color: var(--background); /* фон всей страницы по теме */
+  color: var(--color);                 /* основной цвет текста */
+  font-family: "Montserrat", sans-serif;
 }
 
-.select {
+/* ---------------------------------------------
+   3️⃣ Header
+--------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 2px 0 rgba(29, 33, 38, 0.1),
+  0 0 40px 0 rgba(29, 33, 38, 0.13);
+  padding: 16px 70px;
 
+  position: sticky;     /* закреплённый header */
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background); /* фон по теме */
+  color: var(--color);                 /* текст по теме */
+}
+
+/* Если есть h1 в header */
+.header h1 {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color);
+}
+
+/* ---------------------------------------------
+   4️⃣ Select (SuperSelect)
+--------------------------------------------- */
+.select {
+  border: 1px solid #c2c2c2;
+  border-radius: 2px;
+  width: 171px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding-left: 10px;
+
+  background-color: var(--background); /* фон по теме */
+  color: var(--color);                 /* текст по теме */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Option внутри select */
+.select option {
+  background-color: var(--background); /* фон опций по теме */
+  color: var(--color);                 /* цвет текста опций */
+}
+
+/* ---------------------------------------------
+   5️⃣ Контейнер для страницы / контента
+--------------------------------------------- */
+.hw {
+  padding: 20px;
+}
+
+/* ---------------------------------------------
+   6️⃣ Дополнительно: burgerMenuIcon, если есть
+--------------------------------------------- */
+.burgerMenuIcon {
+  cursor: pointer;
+}
+
+.span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color);
+  padding-bottom: 10px;
 }

@@ -3,10 +3,17 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 0 2px 0 rgba(29, 33, 38, 0.1), 0 0 40px 0 rgba(29, 33, 38, 0.13);
-  padding: 16px 70px 16px 70px;
+  padding: 16px 70px;
+
+  background: white;
+  z-index: 1000;
 }
 
 .header h1 {
