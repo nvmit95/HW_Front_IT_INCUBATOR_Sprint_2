@@ -16,14 +16,20 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    // вычисляем количество страниц
+    const lastPage = Math.ceil(totalCount / itemsCountForPage)
 
+    // обработчик смены страницы
     const onChangeCallback = (event: any, page: number) => {
-        // пишет студент
+        onChange(page, itemsCountForPage)
     }
 
-    const onChangeSelect = (event: any) => {
-        // пишет студент
+
+    const onChangeSelect = (event: number) => {
+        // console.log("onChangeSelect", event)
+        // Просто берем то, что пришло, и преобразуем в число
+        const newCount = Number(event);
+        onChange(1, newCount) // сбрасываем на первую страницу
     }
 
     return (
@@ -52,7 +58,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 7, value: 7},
                     {id: 10, value: 10},
                 ]}
-                onChange={onChangeSelect}
+                onChangeOption={onChangeSelect}
             />
 
             <span className={s.text2}>

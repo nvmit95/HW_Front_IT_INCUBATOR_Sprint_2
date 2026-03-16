@@ -1,27 +1,49 @@
+/* Контейнер строки таблицы */
+.row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Контейнер заголовка таблицы */
+.rowHeader {
+    display: flex;
+    font-weight: 600;
+    padding: 8px 0;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+/* Ячейки Tech и Developer */
 .tech {
-    width: 50vw;
+    width: 50%;
+    padding-left: 8px;
 }
 
 .developer {
-
+    width: 50%;
+    padding-left: 8px;
 }
 
+/* Заголовки */
 .techHeader {
-    width: 50vw;
+    width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .developerHeader {
-
-}
-
-.row {
+    width: 50%;
     display: flex;
+    align-items: center;
 }
 
-.rowHeader {
-    display: flex;
-}
-
+/* Индикатор загрузки */
 .loading {
-
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
 }
+
+
+
